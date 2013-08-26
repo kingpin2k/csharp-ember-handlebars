@@ -182,6 +182,7 @@
     <Content Include="Scripts\app\templates\shows\show\remove.hbs" />
     <Content Include="Scripts\app\templates\_show_details.hbs" />
     <Content Include="Scripts\app\templates\_flash.hbs" />
+    <Content Include="Scripts\app\templates\component\some-component.hbs" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\app\routes\app_home_route.js" />
     <Content Include="Scripts\app\routes\app_route.js" />

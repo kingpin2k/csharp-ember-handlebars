@@ -8,7 +8,7 @@ public class EmberHandlebarsBundleTransform : IBundleTransform {
     
     private string defaultTemplateName   = "default";
     private string resourceNameSeparator = "/";
-    private string fileNameSeparator     = "-";
+    private string fileNameSeparator     = "--";
     private bool   minifyTemplates       = true;
     
     public string DefaultTemplateName {

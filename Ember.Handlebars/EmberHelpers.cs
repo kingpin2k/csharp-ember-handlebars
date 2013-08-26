@@ -8,8 +8,10 @@ using Ember;
 
 public static class HtmlHelperExtensions
 {
+    private const string directoryToken = "<dir-seperator>";
     public static IHtmlString RenderEmberTemplates(this HtmlHelper helper, string path = "", bool noTemplateName = false)
     {
+        
         var templateFolder = EmberJs.ServerMappedTemplatesPath;
 
         if (BundleTable.EnableOptimizations)
@@ -81,7 +83,7 @@ public static class HtmlHelperExtensions
             }
             if (relativeDirName.Length > 0 && relativeDirName[relativeDirName.Length - 1] != '-')
             {
-                relativeDirName += "-";
+                relativeDirName += directoryToken;
             }
             content += ReadTemplate(relativeDirName + subtemplateName, templateFile);
         }
@@ -103,7 +105,7 @@ public static class HtmlHelperExtensions
             return "<script type=\"text/x-handlebars\">\n" + content + "\n</script>\n";
         }
 
-        templateName = templateName.Replace("-", "/");
+        templateName = templateName.Replace(directoryToken, "/");
         var segments = templateName.Split('/');
         if (segments.Length > 2) {
             templateName = string.Format("{0}/{1}", segments[segments.Length - 2], segments[segments.Length - 1]);
