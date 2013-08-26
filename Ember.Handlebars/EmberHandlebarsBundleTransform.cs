@@ -4,8 +4,7 @@ using System.Web;
 using System.Web.Optimization;
 using Microsoft.Ajax.Utilities;
 
-public class 
-    EmberHandlebarsBundleTransform : IBundleTransform {
+public class EmberHandlebarsBundleTransform : IBundleTransform {
     
     private string defaultTemplateName   = "default";
     private string resourceNameSeparator = "/";
